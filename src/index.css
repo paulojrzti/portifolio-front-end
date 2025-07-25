@@ -1,0 +1,33 @@
+@import "tailwindcss";
+/* forçar dark mode via classe .dark */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-bg: 0 0% 100%;     /* fundo claro */
+  --color-fg: 0 0% 3%;       /* texto escuro */
+  --color-primary: 265 100% 55%;  /* roxo principal */
+  --color-secondary: 265 100% 80%; /* roxo mais claro */
+}
+.dark {
+  --color-bg: 0 0% 10%;      /* fundo escuro */
+  --color-fg: 0 0% 90%;      /* texto claro */
+  --color-primary: 265 100% 75%;  /* roxo claro no dark */
+  --color-secondary: 265 100% 60%;
+}
+@theme inline {
+  --color-background: hsl(var(--color-bg));
+  --color-foreground: hsl(var(--color-fg));
+  --color-accent: hsl(var(--color-primary));
+  --color-accent-light: hsl(var(--color-secondary));
+}
+
+@font-face {
+  font-family: 'Ethnocentric';
+  src: url('/fonts/Ethnocentric-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, a{
+  font-family: 'Ethnocentric', sans-serif;
+}
