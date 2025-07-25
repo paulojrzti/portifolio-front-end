@@ -1,4 +1,8 @@
 {
+  "menu": {
+    "projetos": "Projetos",
+    "sobre": "Sobre"
+  },
   "hero": {
     "title": "olá, eu sou PauloJr",
     "subtitle": "Desenvolvedor",

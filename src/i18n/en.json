@@ -1,9 +1,13 @@
 {
+    "menu": {
+      "projetos" : "Projects",
+      "sobre" : "About"
+    },
     "hero" : {
         "title" : "hi, I'm PauloJr",
         "span" : "Front-end",
         "subtitle" : "Developer",
-        "description" : "I'm a frontend developer with experience in React, Typescript, Tailwindcss and Nodejs. I'm a passionate developer who is always learning and growing in my field.",
+        "description" : "I'm a frontend developer with experience in React, Typescript, Tailwindcss and Nodejs.",
         "button" : "Contact me",
         "downloadCV" : "download CV"
     } 
