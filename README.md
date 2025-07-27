@@ -1,69 +1,88 @@
-# React + TypeScript + Vite
+<h1 align="center">🚀 Portfólio Front-End - Paulo Jr</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <strong>Um portfólio moderno, responsivo, animado e bilíngue, desenvolvido com React, TypeScript e TailwindCSS.</strong>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18.2.0-blue?style=flat-square&logo=react" />
+  <img src="https://img.shields.io/badge/TypeScript-5.2-blue?style=flat-square&logo=typescript" />
+  <img src="https://img.shields.io/badge/TailwindCSS-3.3-06b6d4?style=flat-square&logo=tailwindcss" />
+  <img src="https://img.shields.io/badge/i18next-Multilíngue-orange?style=flat-square&logo=i18next" />
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/seu-usuario/seu-print-aqui.png" alt="preview do projeto" width="100%" />
+</div>
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## ✨ Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- 🌐 **Suporte multilíngue** com i18next (Português e Inglês)
+- 🌙 **Tema claro e escuro** com toggle dinâmico
+- ⚡️ **Animações suaves** com GSAP e Framer Motion
+- 📱 **Design 100% responsivo**
+- 🧠 Organização por componentes, hooks e layout
+- 🖼️ Galeria interativa com hover preview
+- 📂 Scroll inteligente: mantém posição ao navegar entre projetos
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧪 Tecnologias usadas
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [GSAP](https://gsap.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [i18next](https://www.i18next.com/)
+- [React Router DOM](https://reactrouter.com/en/main)
+
+---
+
+## 📁 Estrutura de Pastas
+
+```bash
+src
+├── assets/              # Imagens e mídias
+├── components/          # Componentes reutilizáveis
+├── hooks/               # Hooks customizados
+├── i18n/                # Traduções
+├── layout/              # Seções da página (Hero, About, Projects...)
+├── types/               # Tipagens TypeScript globais
+├── App.tsx              # Definição de rotas
+└── main.tsx             # Entry point
+
+🛠️ Instalação e uso local
+
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+
+# Acesse a pasta do projeto
+cd seu-repositorio
+
+# Instale as dependências
+npm install
+
+# Rode o projeto
+npm run dev
+
+🧑‍💻 Autor
+
+Feito com ❤️ por Paulo Jr
+📫 LinkedIn
+📸 Instagram
+🐙 GitHub
+📝 Licença
+
+Esse projeto está sob a licença MIT.
+Sinta-se livre para usar, contribuir e aprender com ele.
+
+    Nota: Este projeto foi desenvolvido como parte do meu portfólio pessoal. Fique à vontade para dar sugestões ou feedbacks!
+
+
