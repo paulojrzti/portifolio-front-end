@@ -7,6 +7,23 @@
     "title": "olá, eu sou PauloJr",
     "subtitle": "Desenvolvedor",
     "span": "Front-end",
-    "description": "Especialista em UX | UI desing, websites, react, next, typescrpt "
+    "description": "Especialista em UX | UI desing, websites, react, next, typescrpt ",
+    "button": "Contato",
+    "downloadCV": "download CV"
+  },
+  "about": {
+    "title": "Sobre",
+    "description": "Atualmente curso Gestão da Tecnologia da Informação, com foco no entendimento estratégico da TI dentro das organizações. Em paralelo, estou me especializando em Desenvolvimento Front-End e UX Design, com ênfase em interfaces funcionais, responsivas e bem estruturadas. Tenho interesse direto na aplicação prática da tecnologia, e venho estudando ferramentas como React, TypeScript, Tailwind CSS e Figma para construir projetos com qualidade técnica e foco em usabilidade. Busco oportunidades onde eu possa aplicar esse conhecimento de forma objetiva, contribuindo com soluções digitais que atendam tanto a requisitos de negócio quanto à experiência do usuário.",
+    "exp": "Anos de <br /> experiencia",
+    "projects": "Projetos <br /> concluidos",
+    "empresas": "Empresas <br /> trabalhadas"
+  },
+  "stecks": {
+    "title": "Skils"
+  },
+  "footer": {
+    "title": "Entre <br /> em contato",
+    "whatsapp": "whatsapp",
+    "email": "email"
   }
 }

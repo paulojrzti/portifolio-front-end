@@ -1,20 +1,22 @@
 import { useTranslation } from "react-i18next";
 import HeroBg from "./HeroBg";
 import { Menu } from "../../components";
-import { ArrowUpRight } from "lucide-react"; 
+import { ArrowUpRight} from "lucide-react";
+import animationData from "../../assets/ScrollDown.json";
+import Lottie from "lottie-react";
 
 export const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative size-full h-screen flex flex-col items-center justify-center overflow-hidden bg-[var(--color-background)] text-[var(--color-foreground)] transition-colors">
+    <div className="relative size-full h-screen flex flex-col items-center justify-center overflow-hidden text-[var(--color-foreground)] transition-colors">
       {/* HeroBg visível sempre, está escuro por padrão */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <HeroBg />
       </div>
 
       {/* Overlay que aparece SOMENTE no tema claro, para cobrir HeroBg */}
-      <div className="absolute inset-0 z-10 bg-[var(--color-background)] dark:hidden"></div>
+      <div className="absolute inset-0 z-10  bg-[var(--color-background)] dark:hidden"></div>
 
       {/* Menu fixo centralizado no topo */}
       <div className="fixed top-6 left-1/2 -translate-x-1/2 z-20">
@@ -32,7 +34,7 @@ export const Hero = () => {
 
         <p className="text-2xl opacity-80">{t("hero.description")}</p>
 
-        <div className="flex gap-10 justify-center mt-20 flex-wrap">
+        <div className="flex gap-10 justify-center mt-15 flex-wrap">
           <a
             target="_blank"
             href="https://github.com/PauloJrDev"
@@ -54,6 +56,14 @@ export const Hero = () => {
             </span>
           </a>
         </div>
+      </div>
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30">
+        <Lottie
+          animationData={animationData}
+          loop={true}
+          autoplay={true}
+          className="w-25 h-25" // Tailwind para tamanho
+        />
       </div>
     </div>
   );

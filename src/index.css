@@ -1,33 +1,49 @@
 @import "tailwindcss";
-/* forçar dark mode via classe .dark */
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Ethnocentric";
+  src: url("/fonts/Ethnocentric-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background-color: #0b0b0d;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ethnocentric", sans-serif;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-bg: 0 0% 100%;     /* fundo claro */
-  --color-fg: 0 0% 3%;       /* texto escuro */
-  --color-primary: 265 100% 55%;  /* roxo principal */
-  --color-secondary: 265 100% 80%; /* roxo mais claro */
+  --color-bg: 0 0% 100%;
+  --color-fg: 270 60% 20%;
+  --color-primary: 265 100% 55%;
+  --color-secondary: 265 100% 80%;
+  --color-surface: 262 64% 10%; 
+  --color-footer: 270 60% 20%; 
 }
 .dark {
-  --color-bg: 0 0% 10%;      /* fundo escuro */
-  --color-fg: 0 0% 90%;      /* texto claro */
-  --color-primary: 265 100% 75%;  /* roxo claro no dark */
+  --color-bg: 240 4% 5%;
+  --color-fg: 0 0% 90%;
+  --color-primary: 265 100% 75%;
   --color-secondary: 265 100% 60%;
+   --color-surface: 270 4% 17%; 
+   --color-footer: 270 60% 20%; 
 }
 @theme inline {
   --color-background: hsl(var(--color-bg));
   --color-foreground: hsl(var(--color-fg));
   --color-accent: hsl(var(--color-primary));
   --color-accent-light: hsl(var(--color-secondary));
-}
-
-@font-face {
-  font-family: 'Ethnocentric';
-  src: url('/fonts/Ethnocentric-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ethnocentric', sans-serif;
+  --color-surface-color: hsl(var(--color-surface));
+  --color-footer-color: hsl(var(--color-footer));
 }

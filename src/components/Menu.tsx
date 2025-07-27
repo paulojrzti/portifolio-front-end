@@ -3,7 +3,7 @@ import LanguageToggle from "./LanguageToggle";
 
 export function Menu() {
   return (
-    <nav className="flex flex-row w-screen px-8 justify-between items-center">
+    <nav className="flex flex-row w-screen px-30 justify-between items-center mix-blend-color">
       {/* Logo para tema claro */}
       <img
         src="/logo-dark.svg"

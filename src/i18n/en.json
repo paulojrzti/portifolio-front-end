@@ -10,5 +10,20 @@
         "description" : "I'm a frontend developer with experience in React, Typescript, Tailwindcss and Nodejs.",
         "button" : "Contact me",
         "downloadCV" : "download CV"
-    } 
+    },
+    "about" : {
+        "title" : "About me",
+        "description" : "I’m currently studying Information Technology Management, with a focus on the strategic role of IT within organizations. Alongside that, I’m specializing in Front-End Development and UX Design, with an emphasis on building responsive, functional, and well-structured interfaces. My main interest is in the practical application of technology. I’ve been working with tools like React, TypeScript, Tailwind CSS, and Figma to build technically solid projects with usability in mind. I'm looking for opportunities where I can apply this knowledge in a direct and results-oriented way contributing to digital solutions that align both with business needs and user experience.",
+        "exp": "Years of <br /> experience",
+        "projects": "Completed <br /> projects",
+        "empresas": "Companies <br /> worked with"
+    },
+    "stecks" : {
+        "title" : "my Skils"
+    },
+    "footer" : {
+        "title" : "let’s <br /> conect",
+        "whatsapp" : "whatsapp",
+        "email" : "email"
+    }
 }
