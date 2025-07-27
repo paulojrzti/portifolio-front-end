@@ -64,70 +64,72 @@ export const About = () => {
   }, []);
 
   return (
-    <div className="relative px-6 md:px-20 py-24 bg-[var(--color-background)] text-[var(--color-foreground)]">
-      <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12">
-        {/* Conteúdo */}
-        <div className="max-w-3xl w-full">
+    <section
+      id="about"
+      className="w-screen bg-[var(--color-background)] px-6 md:px-8 py-28 text-[var(--color-foreground)]"
+    >
+      <div className="max-w-screen-xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-16">
+        {/* Texto e contadores */}
+        <div className="flex-1 w-full max-w-2xl">
           <h2
             ref={titleRef}
-            className="text-5xl md:text-6xl font-bold uppercase tracking-widest font-mono mb-6 text-center md:text-left"
+            className="text-5xl md:text-6xl font-bold uppercase tracking-widest font-mono mb-8 text-left"
           >
             {t("about.title")}
           </h2>
 
           <p
             ref={descRef}
-            className="text-lg md:text-xl leading-relaxed font-light text-justify md:text-left"
+            className="text-lg md:text-xl leading-relaxed font-light text-left"
           >
             {t("about.description")}
           </p>
 
-          {/* Cards de números */}
           <div
             ref={cardsRef}
-            className="flex flex-col sm:flex-row justify-around gap-10 mt-10"
+            className="flex flex-col sm:flex-row gap-10 mt-12 justify-start"
           >
             {/* Experiência */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-start">
               <div className="text-4xl font-mono font-bold text-[var(--color-accent)]">
                 <CountUp from={0} to={2} direction="up" duration={2} />+
               </div>
-              <p className="text-center font-mono font-bold text-sm">
+              <p className="font-mono font-bold text-sm">
                 <Trans i18nKey="about.exp" components={{ br: <br /> }} />
               </p>
             </div>
 
             {/* Projetos */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-start">
               <div className="text-4xl font-mono font-bold text-[var(--color-accent)]">
                 <CountUp from={0} to={20} direction="up" duration={2} />+
               </div>
-              <p className="text-center font-mono font-bold text-sm">
+              <p className="font-mono font-bold text-sm">
                 <Trans i18nKey="about.projects" components={{ br: <br /> }} />
               </p>
             </div>
 
             {/* Empresas */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-start">
               <div className="text-4xl font-mono font-bold text-[var(--color-accent)]">
                 <CountUp from={0} to={3} direction="up" duration={2} />+
               </div>
-              <p className="text-center font-mono font-bold text-sm">
+              <p className="font-mono font-bold text-sm">
                 <Trans i18nKey="about.empresas" components={{ br: <br /> }} />
               </p>
             </div>
           </div>
         </div>
 
-        {/* Foto */}
+        {/* Imagem */}
         <div className="flex justify-center items-center flex-shrink-0">
           <img
-            className="border-4 border-[var(--color-accent)] rounded-full w-48 h-48 md:w-64 md:h-64 object-cover shadow-xl"
+            className="border-4 border-[var(--color-accent)] rounded-full w-72 h-72 md:w-96 md:h-96 object-cover shadow-xl"
             src={aboutImage}
             alt="Foto de perfil"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

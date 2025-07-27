@@ -59,7 +59,7 @@ export const Stecks = () => {
 
       {/* Título */}
       <h2 className="text-5xl md:text-6xl font-bold text-center font-mono tracking-widest uppercase relative z-10 mb-20">
-        <span className="text-purple-400">{t("stecks.title")}</span>
+        <span className="text-[var(--color-accent)]">{t("stecks.title")}</span>
       </h2>
 
       {/* Grid de Skills */}
@@ -70,10 +70,10 @@ export const Stecks = () => {
         {icons.map(({ icon, label }, index) => (
           <div
             key={index}
-            className="opacity-0 flex flex-col items-center justify-center rounded-xl border border-purple-500/30 bg-[var(--color-surface)] backdrop-blur-md p-6 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_#a78bfa50] hover:bg-purple-500/10 group"
+            className="opacity-0 flex flex-col items-center justify-center rounded-xl border border-[var(--color-accent)]/30 bg-[var(--color-surface)] backdrop-blur-md p-6 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_var(--color-accent)]/30 hover:bg-[var(--color-accent)]/10 group"
             title={label}
           >
-            <div className="text-[var(--color-accent)] group-hover:text-purple-400 transition-colors">
+            <div className="text-[var(--color-accent)] group-hover:text-[var(--color-accent-light)] transition-colors">
               {icon}
             </div>
             <span className="mt-3 text-sm italic font-mono text-[color:var(--color-foreground)]/80 group-hover:text-[color:var(--color-foreground)]">
