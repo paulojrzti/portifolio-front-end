@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
 import HeroBg from "./HeroBg";
-import { Menu } from "../../components";
-import { ArrowUpRight} from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import animationData from "../../assets/ScrollDown.json";
 import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   const { t } = useTranslation();
@@ -16,55 +16,89 @@ export const Hero = () => {
       </div>
 
       {/* Overlay que aparece SOMENTE no tema claro, para cobrir HeroBg */}
-      <div className="absolute inset-0 z-10  bg-[var(--color-background)] dark:hidden"></div>
-
-      {/* Menu fixo centralizado no topo */}
-      <div className="fixed top-6 left-1/2 -translate-x-1/2 z-20">
-        <Menu />
-      </div>
+      <div className="absolute inset-0 z-10 bg-[var(--color-background)] dark:hidden"></div>
 
       {/* Conteúdo principal */}
-      <div className="flex flex-col gap-4 z-20 text-[var(--color-foreground)] px-4 text-center">
-        <h1 className="text-7xl">{t("hero.title")}</h1>
+      <motion.div
+        className="flex flex-col gap-4 z-20 text-[var(--color-foreground)] px-4 text-center"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h1
+          className="text-7xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+        >
+          {t("hero.title")}
+        </motion.h1>
 
-        <h2 className="text-6xl">
+        <motion.h2
+          className="text-6xl"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
           <span className="text-[var(--color-accent)]">{t("hero.span")}</span>{" "}
           {t("hero.subtitle")}
-        </h2>
+        </motion.h2>
 
-        <p className="text-2xl opacity-80">{t("hero.description")}</p>
+        <motion.p
+          className="text-2xl opacity-80"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.9 }}
+        >
+          {t("hero.description")}
+        </motion.p>
 
-        <div className="flex gap-10 justify-center mt-15 flex-wrap">
+        <motion.div
+          className="flex gap-10 justify-center mt-15 flex-wrap"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, delay: 1.2 }}
+        >
           <a
             target="_blank"
             href="https://github.com/PauloJrDev"
             className="text-center"
           >
-            <button className="px-6 text-2xl py-2 rounded-full border border-current text-[var(--color-foreground)] font-[Ethnocentric] italic tracking-wide uppercase hover:brightness-125 transition-all">
+            <button className="px-6 text-2xl py-2 rounded-full border border-current text-[var(--color-foreground)] font-[Ethnocentric] italic tracking-wide uppercase transition-all duration-300 hover:bg-[var(--color-foreground)] hover:text-[var(--color-background)] backdrop-blur-md bg-white/5 dark:bg-black/20">
               {t("hero.button")}
             </button>
           </a>
 
           <a
             href=""
-            className="flex text-2xl items-center gap-3 text-[var(--color-foreground)] italic font-[Ethnocentric] tracking-wide transition-all group"
+            className="flex text-2xl items-center gap-3 text-[var(--color-foreground)] italic font-[Ethnocentric] tracking-wide transition-all duration-200 hover:underline underline-offset-4 decoration-[var(--color-accent)] group"
           >
             {t("hero.downloadCV")}
 
-            <span className="rounded-full w-6 h-6 bg-[var(--color-accent)] flex items-center justify-center group-hover:scale-105 transition-transform">
+            <motion.span
+              className="rounded-full w-6 h-6 bg-[var(--color-accent)] flex items-center justify-center group-hover:scale-110 transition-transform"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
               <ArrowUpRight size={12} className="text-white" />
-            </span>
+            </motion.span>
           </a>
-        </div>
-      </div>
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30">
+        </motion.div>
+      </motion.div>
+
+      <motion.div
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 1 }}
+      >
         <Lottie
           animationData={animationData}
           loop={true}
           autoplay={true}
-          className="w-25 h-25" // Tailwind para tamanho
+          className="w-25 h-25"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

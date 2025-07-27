@@ -7,6 +7,11 @@
   font-weight: normal;
   font-style: normal;
 }
+html,
+body,
+#root {
+  height: 100%;
+}
 body {
   background-color: #0b0b0d;
 }
@@ -28,16 +33,16 @@ p {
   --color-fg: 270 60% 20%;
   --color-primary: 265 100% 55%;
   --color-secondary: 265 100% 80%;
-  --color-surface: 262 64% 10%; 
-  --color-footer: 270 60% 20%; 
+  --color-surface: 262 64% 10%;
+  --color-footer: 270 60% 20%;
 }
 .dark {
   --color-bg: 240 4% 5%;
   --color-fg: 0 0% 90%;
   --color-primary: 265 100% 75%;
   --color-secondary: 265 100% 60%;
-   --color-surface: 270 4% 17%; 
-   --color-footer: 270 60% 20%; 
+  --color-surface: 270 4% 17%;
+  --color-footer: 270 60% 20%;
 }
 @theme inline {
   --color-background: hsl(var(--color-bg));
