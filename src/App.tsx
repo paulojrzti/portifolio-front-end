@@ -1,6 +1,7 @@
 import { Hero, About, Stecks, ProjectsPage, ProjectsDetail, Footer } from "./layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Preloader } from "./components/Preloader";
 
 function LandingPage() {
   useEffect(() => {
@@ -10,13 +11,37 @@ function LandingPage() {
       sessionStorage.removeItem("scrollPosition"); // limpa pra não rolar de novo
     }
   }, []);
+
+    const [isReady, setIsReady] = useState(false);
+
+    useEffect(() => {
+      const handleReady = () => {
+        // Tudo foi carregado: DOM, imagens, fontes, scripts
+        setIsReady(true);
+      };
+
+      if (document.readyState === "complete") {
+        handleReady();
+      } else {
+        window.addEventListener("load", handleReady);
+        return () => window.removeEventListener("load", handleReady);
+      }
+    }, []);
+
+
+
   return (
     <>
-      <Hero />
-      <About />
-      <Stecks />
-      <ProjectsPage />
-      <Footer/>
+      {!isReady && <Preloader />}
+      {isReady && (
+        <>
+          <Hero />
+          <About />
+          <Stecks />
+          <ProjectsPage />
+          <Footer />
+        </>
+      )}
     </>
   );
 }
