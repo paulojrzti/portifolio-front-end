@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
-import loadingAnimation from "../assets/loading.json";
+import loadingAnimation from "../assets/Loading.json";
 
 export const Preloader = () => {
   const [fadeOut, setFadeOut] = useState(false);
