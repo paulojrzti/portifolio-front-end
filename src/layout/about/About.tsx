@@ -10,47 +10,54 @@ gsap.registerPlugin(ScrollTrigger);
 export const About = () => {
   const { t } = useTranslation();
 
-  const titleRef = useRef(null);
-  const descRef = useRef(null);
-  const cardsRef = useRef(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descRef = useRef<HTMLParagraphElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(titleRef.current, {
-        opacity: 0,
-        y: 40,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: titleRef.current,
-          start: "top 80%",
-        },
-      });
+      if (titleRef.current) {
+        gsap.from(titleRef.current, {
+          opacity: 0,
+          y: 40,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 80%",
+          },
+        });
+      }
 
-      gsap.from(descRef.current, {
-        opacity: 0,
-        x: -30,
-        duration: 1.2,
-        delay: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: descRef.current,
-          start: "top 85%",
-        },
-      });
+      if (descRef.current) {
+        gsap.from(descRef.current, {
+          opacity: 0,
+          x: -30,
+          duration: 1.2,
+          delay: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: descRef.current,
+            start: "top 85%",
+          },
+        });
+      }
 
-      gsap.from(cardsRef.current?.children || [], {
-        opacity: 0,
-        y: 40,
-        stagger: 0.2,
-        duration: 1.2,
-        delay: 0.4,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: cardsRef.current,
-          start: "top 85%",
-        },
-      });
+      if (cardsRef.current) {
+        const elements = Array.from(cardsRef.current.children);
+        gsap.from(elements, {
+          opacity: 0,
+          y: 40,
+          stagger: 0.2,
+          duration: 1.2,
+          delay: 0.4,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 85%",
+          },
+        });
+      }
     });
 
     return () => ctx.revert();
